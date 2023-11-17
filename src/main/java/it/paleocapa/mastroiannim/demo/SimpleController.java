@@ -34,7 +34,7 @@ public class SimpleController {
 
     @RequestMapping("/user/{id}")
     public String getBorrowByUser(@PathVariable long id, Model model) {        
-        List<Book> books = bookRepository.searchBorrowByUser(id);
+        List<Book> books = bookRepository.findBorrowByUser(id);
         model.addAttribute("books", books);
         return "books";
 

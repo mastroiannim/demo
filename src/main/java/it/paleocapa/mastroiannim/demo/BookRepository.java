@@ -14,5 +14,5 @@ public interface BookRepository extends CrudRepository<Book, Long> {
     " FROM (USER_ACCOUNT ua INNER JOIN BORROW bo ON ua.id = bo.USER_ACCOUNT) INNER JOIN BOOK b ON bo.BOOK = b.ID" + 
     " WHERE bo.USER_ACCOUNT = :id"+
     "", nativeQuery = true)
-    List<Book> searchBorrowByUser(@Param("id") long id);
+    List<Book> findBorrowByUser(@Param("id") long id);
 }
