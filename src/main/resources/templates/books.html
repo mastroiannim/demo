@@ -1,0 +1,18 @@
+<html>
+<head><title>Book Page</title></head>
+<body>
+    <h1>List of Books</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>author</th>
+        </tr>
+        <tr th:each="book : ${books}">
+            <td th:text="${book.id}">1</td>
+            <td th:text="${book.title}">John</td>
+            <td th:text="${book.author.name}">Doe</td>
+        </tr>
+    </table>
+</body>
+</html>
